@@ -22,6 +22,6 @@ public class ArrayDemo2 {
                 max = scores[i];
             }            
         }
-        System.out.println(max);
+        System.out.printf("最高分 :%d \n",max);
     }    
 }
