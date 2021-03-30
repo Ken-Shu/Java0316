@@ -13,9 +13,8 @@ public class ABGuessNumber {
         do {            
             System.out.print("請輸入一組不重複的四位數字: ");
             String guess = sc.next();
-           
             int [] guessArray = {guess.charAt(0)-48,guess.charAt(1)-48,guess.charAt(2)-48,guess.charAt(3)-48};
-          
+            
             //判斷 a , b
             int a = 0;
             int b = 0;
