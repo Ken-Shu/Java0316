@@ -6,8 +6,7 @@ import java.util.Scanner;
 
 public class ABGuessNumber {
     public static void main(String[] args) {       
-        Scanner sc = new Scanner(System.in);        
-        Util util = new Util();        
+        Scanner sc = new Scanner(System.in);              
         int [] ansArray = Util.getAnsArray();
         System.out.println(Arrays.toString(ansArray));
         do {            
