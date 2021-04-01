@@ -51,7 +51,7 @@ public class ABGuessNumber2 {
             String nstring = Integer.toString(n);
            
                  //輸入多餘4位數字 或少餘
-            if (n>9999 || n<1000) {
+            if (n>9999 || n<100) {
                 System.out.println("輸入錯誤 請重新輸入不重複四位數字");
                 continue;
                 }
