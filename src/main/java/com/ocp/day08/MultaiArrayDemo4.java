@@ -8,19 +8,24 @@ public class MultaiArrayDemo4 {
         //01 11
         //02 12
        MultaiArrayDemo4 m4 = new MultaiArrayDemo4();
-        System.out.println(m4.bmi(hw));
+        m4.bmi(hw);
     }
     public double bmi(double [][] hw){
         double bmi = 0;
-            for(int i = 0 ; i<hw.length;i++){
-                for (int j = 0; j < hw[i].length; j++) {
-                    double weight = hw[1][j];
-                    double height = hw[0][j];
-                    bmi = weight/Math.pow(height/100, 2);   
-                }
-                
-            }  
+//            for(int i = 0 ; i<3;i++){              
+//                double weight = hw[1][i];
+//                double height = hw[0][i];
+//                bmi = weight/Math.pow(height/100, 2);                               
+//                System.out.printf("%.1f\n",bmi);
+//            }
             
+                for (int i = 0; i < 3; i++) {
+                double weight = hw[1][i];
+                double height = hw[0][i];
+                bmi = weight/Math.pow(height/100, 2);                               
+                System.out.printf("%.1f\n",bmi);
+                }
+       
         return bmi;
     }
 }
