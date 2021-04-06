@@ -18,10 +18,11 @@ public class MultaiArrayDemo4 {
 //                bmi = weight/Math.pow(height/100, 2);                               
 //                System.out.printf("%.1f\n",bmi);
 //            }
-            
+            int w = 1;
+            int h = 0;
                 for (int i = 0; i < 3; i++) {
-                double weight = hw[1][i];
-                double height = hw[0][i];
+                double weight = hw[w][i];
+                double height = hw[h][i];
                 bmi = weight/Math.pow(height/100, 2);                               
                 System.out.printf("%.1f\n",bmi);
                 }
