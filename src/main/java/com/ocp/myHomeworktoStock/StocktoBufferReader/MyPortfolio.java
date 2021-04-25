@@ -25,6 +25,7 @@ public class MyPortfolio {
                 .filter( r -> r.split(",")[2].matches("-?\\d+(\\.\\d+)?"))
                 .filter( r -> r.split(",")[4].matches("-?\\d+(\\.\\d+)?"))
                 .filter( r -> r.split(",")[5].matches("-?\\d+(\\.\\d+)?"))
+                //殖利率
                 .filter(r -> {
                     double y = Double.parseDouble(r.split(",")[2]);
                     return y > 7.0;
