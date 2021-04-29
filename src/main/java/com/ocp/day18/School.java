@@ -47,5 +47,16 @@ public class School {
 //                .mapToInt(x -> x.getScore())
 //                .filter(x -> x <60)
 //                .summaryStatistics()
+        //印出不及格學生的老師姓名
+        Arrays.stream(DataCenter.getPeople())
+                .peek(e -> e.getClass().getTypeName())
+                .filter(e -> e instanceof Student)
+                .map(e -> (Student)e)
+                .filter(e -> e.getScore()<60)
+                .peek(e -> System.out.printf("不及格學生老師姓名 : %s \n",e.getTeacher().getName()))
+                .mapToInt(e -> e.getScore())
+                .forEach(System.out::println);
+        System.out.println("--------------------------------------------");
+       
    }
 }
