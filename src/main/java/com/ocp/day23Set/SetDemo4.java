@@ -24,7 +24,7 @@ public class SetDemo4 {
         IntSummaryStatistics sum = 
                 scores.stream()
                         .filter(p)
-                        //.filter(e->Score.isValid(e))
+                        //filter(e->Score.isValid(e))
                         .mapToInt(Integer::intValue)
                         .summaryStatistics();
         System.out.println(sum.getSum());
