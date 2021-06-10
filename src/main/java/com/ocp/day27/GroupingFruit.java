@@ -40,9 +40,11 @@ public class GroupingFruit {
         Map <String , Integer> result2 = fruits
                 .stream()
                 .collect(Collectors.groupingBy(Fruit::getName, Collectors.summingInt(Fruit::getQty)));
+        //{蘋果=40, 柳丁=10, 香蕉=30, 木瓜=20, 西瓜=10}
         System.out.println("result2"+result2);
         
         //分組 by price
+        //{29.99=[柳丁, 西瓜], 9.99=[蘋果, 木瓜], 19.99=[香蕉]}
         System.out.println(
                 //mapping 轉換成 getname 然後使用 toSet 因為讓資料不要重複
         fruits.stream()
@@ -53,6 +55,7 @@ public class GroupingFruit {
         Map<Double , Set<String>> result4 =fruits.stream()
                 .collect(Collectors.groupingBy(Fruit::getPrice,
                         Collectors.mapping(Fruit::getName, Collectors.toSet())));
+        //{29.99=[柳丁, 西瓜], 9.99=[蘋果, 木瓜], 19.99=[香蕉]}
         System.out.println("result4"+result4);
     }
 
